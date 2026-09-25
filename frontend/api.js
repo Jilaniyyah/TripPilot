@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://trippilot-backend-0xk1.onrender.com';
+const API_BASE_URL = '';
 
 const tripForm = document.getElementById('trip-form');
 const tripRequestInput = document.getElementById('trip-request');
