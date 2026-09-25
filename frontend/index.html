@@ -3,143 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tripilot - Your trip, planned from one conversation.</title>
+    <title>TripPilot — Your trip, planned from one conversation.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="trip.css">
 </head>
 <body>
+
     <header class="nav">
         <div class="nav-inner">
-            <div class="wordmark"><span class="mark"></span>TripPilot </div>
-               <nav class="nav-links">
-                <a href="#how" class="active">Explore</a>
-                <a href="features">How it works</a>
-                <a href="#">My Trips</a>
-
-               </nav>
-               <a class="nav-cta" href="#plan">Plan My Trip</a>
+            <a href="#" class="wordmark">
+                <span class="mark">🧭</span>TripPilot
+            </a>
+            <nav class="nav-links">
+                <a href="#how">How it works</a>
+                <a href="#features">Features</a>
+            </nav>
+            <a class="nav-cta" href="#plan">Plan My Trip</a>
         </div>
     </header>
 
-    <main>
-        <section class="hero" id="plan">
-            <div class="wrap hero-inner">
-                <h1 class="headline">Your trip, planned from<span class="accent"> one conversation.
-                </span></h1>
-                <p class="sub">Tell TripPilot where you are going and what you can spend - it searches
-                    flights and hotels, compares them against your budget, and hands you
-                    a complete itinerary to approve.
-                </p>
-                <form class="searchbar" id="trip-form">
-                    <div class="field">
-                        <label for="trip-request">Tell us your trip</label>
-                        <input
-                            id="trip-request"
-                            type="text"
-                            placeholder="e.g. Lagos to London, Oct 15–20, minimal stops"
-                            required
-                        >
-                    </div>
+    <section class="hero" id="plan">
+        <div class="wrap hero-inner">
+            <div class="hero-eyebrow">✈ AI-powered trip planning</div>
+            <h1 class="headline">Your trip, planned from<br><span class="accent">one conversation.</span></h1>
+            <p class="sub">Tell TripPilot where you're going and what you can spend — it searches live flights and hotels, compares them against your budget, and hands you a complete itinerary.</p>
 
-                    <div class="field">
-                        <label for="budget">Budget (optional)</label>
-                        <input
-                            id="budget"
-                            type="text"
-                            placeholder="e.g. $1200"
-                        >
-                    </div>
+            <form class="searchbar" id="trip-form">
+                <div class="field">
+                    <label for="trip-request">Where are you going?</label>
+                    <input id="trip-request" type="text" placeholder="e.g. Lagos to London, Oct 15–20, 2 adults" required autocomplete="off">
+                </div>
+                <div class="field field-budget">
+                    <label for="budget">Budget</label>
+                    <input id="budget" type="text" placeholder="e.g. $3,000" autocomplete="off">
+                </div>
+                <button class="search-btn" type="submit" id="submit-btn">
+                    <span class="btn-text">Plan My Trip</span>
+                    <span class="btn-icon" aria-hidden="true">→</span>
+                </button>
+            </form>
 
-                    <button class="search-btn" type="submit">
-                        Plan My Trip
-                    </button>
-                </form>
-                <div id="trip-result" aria-live="polite"></div>
-            </div>
-        </section>
-
-        <div class="wrap">
-            <div class="pills">
-                <a class="pill" href="#plan">&#129517 Start Planning</a>
-                <a class="pill" href="#features">&#9992 &#65039 Flights</a>
-                <a class="pill" href="#features">&#127960 Hotels</a>
-                <a class="pill" href="#features">&#128176 Budget Trips</a>
-
+            <div class="hero-trust">
+                <span>✓ Live Google Flights data</span>
+                <span>✓ Real Booking.com rates</span>
+                <span>✓ Budget-aware ranking</span>
             </div>
         </div>
+    </section>
 
-        <section class="how" id="how">
+    <section id="results-area" aria-live="polite"></section>
+
+    <section class="how" id="how">
         <div class="wrap">
             <div class="section-head">
                 <h2>How it works</h2>
-                <p>Four steps between a passing thought and a confirmed
-                    trip.
-                </p>
+                <p>Four steps between a passing thought and a confirmed trip.</p>
             </div>
             <div class="steps">
                 <div class="step">
                     <span class="num">01</span>
                     <h3>Tell us your trip</h3>
-                    <p>Origin, destination, dates, travellers, budget and preferences
-                        in plain language.
-                    </p>
+                    <p>Origin, destination, dates, travellers, budget and preferences in plain language.</p>
                 </div>
                 <div class="step">
                     <span class="num">02</span>
-                    <h3>We find and compare</h3>
-                    <p>TripPilot searches flights and hotels and
-                        lines up the options that fit your budget.
-                    </p>
-            </div>
-            <div class="step">
+                    <h3>We search live</h3>
+                    <p>TripPilot queries Google Flights and Booking.com in real time for your exact dates.</p>
+                </div>
+                <div class="step">
                     <span class="num">03</span>
-                    <h3>You choose and approve</h3>
-                    <p>Review a clear summary, pick what works, and approve
-                        the plan.
-                    </p>
-        </div>
-        <div class="step">
+                    <h3>You pick and approve</h3>
+                    <p>Review ranked options, pick what works, and approve your plan.</p>
+                </div>
+                <div class="step">
                     <span class="num">04</span>
-                    <h3>Pay and get your itinerary</h3>
-                    <p>Checkout securely and recieve a complete, ready-to-travel itinerary.
-                    </p>
+                    <h3>Get your itinerary</h3>
+                    <p>Receive a complete, ready-to-travel itinerary with all your details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>What TripPilot handles for you</h2>
+            </div>
+            <div class="feature-list">
+                <div class="feature-row">
+                    <div class="emoji">✈️</div>
+                    <div>
+                        <h3>Flights</h3>
+                        <p>Searched and compared across all routes and dates so you don't have to.</p>
                     </div>
-                </section>
-
-                <section class="features" id="features">.
-                    <div class="wrap">
-                        <div class="section-head">
-                            <h2>What TripPilot handles for you</h2>
-                        </div>
-                        <div class="feature-list"></div>
-                            <div class="feature-row"></div>
-                                <div class="emoji">&#9992 &#65039 </div>
-                                <div><h3>Flights</h3><p>Searched and compared across
-                                    routes and dates so you don't have to.
-                                </p></div>
-                                <div class="feature-row"></div>
-                                <div class="emoji">&#127960 </div>
-                                <div><h3>Hotels</h3><p>Matched to your dates, party size and area preferences.
-                                </p></div>
-
-                                <div class="feature-row"></div>
-                                <div class="emoji">&#128176 </div>
-                                <div><h3>Budget-aware planning</h3><p>Every option is weighed against the budget you set,not just the cheapest one.
-                                </p></div>
-
-
-                                <div class="feature-row"></div>
-                                <div class="emoji">&#127890 </div>
-                                <div><h3>Travel readiness </h3><p>Visa, document and packing pointers so nothing gets missed before you fly.
-                                </p></div>
-                            </div>
-                        </div>
+                </div>
+                <div class="feature-row">
+                    <div class="emoji">🏨</div>
+                    <div>
+                        <h3>Hotels</h3>
+                        <p>Matched to your dates, party size and area preferences.</p>
                     </div>
-                </section>
-    </main>
+                </div>
+                <div class="feature-row">
+                    <div class="emoji">💰</div>
+                    <div>
+                        <h3>Budget-aware planning</h3>
+                        <p>Every option is weighed against the budget you set, not just the cheapest one.</p>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <div class="emoji">🧳</div>
+                    <div>
+                        <h3>Travel readiness</h3>
+                        <p>Visa, document and packing pointers so nothing gets missed before you fly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="wrap">
             <div class="footer-inner">
-                <div class="wordmark"><span class="mark">&#129517 </span>TripPilot</div>
+                <a href="#" class="wordmark footer-wordmark">
+                    <span class="mark">🧭</span>TripPilot
+                </a>
                 <div class="footer-links">
                     <a href="#how">How it works</a>
                     <a href="#features">Features</a>
@@ -147,9 +137,10 @@
                     <a href="#">Privacy</a>
                 </div>
             </div>
-            <div class="footer-copy">&copy 2026 TripPilot. All trips, one conversation.</div>
+            <p class="footer-copy">© 2026 TripPilot. All trips, one conversation.</p>
         </div>
     </footer>
+
     <script src="api.js"></script>
 </body>
 </html>
