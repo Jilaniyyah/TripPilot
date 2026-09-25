@@ -1,0 +1,19 @@
+{
+    "$schema": "https://apify.com/schemas/v1/input.ide.json",
+    "title": "TripPilot — AI Travel Research Agent",
+    "description": "Describe your trip naturally. TripPilot interprets your requirements, researches travel options, applies your constraints, and returns explainable recommendations.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "request": {
+            "title": "Describe your trip",
+            "type": "string",
+            "description": "Include your origin, destination, travel dates, travellers, budget, and any important preferences or constraints.",
+            "editor": "textarea",
+            "default": "I am travelling from Lagos to London from October 15 to October 20, 2026 with my wife, an elderly parent and an infant. We want something reasonably priced, minimal stops and a hotel in London."
+        }
+    },
+    "required": [
+        "request"
+    ]
+}
